@@ -6,6 +6,7 @@
 Base on DjangoCMS and Front-end Themes,include [startbootstrap-sb-admin-2-gh-pages](https://startbootstrap.com/template-categories/all/ "startbootstrap-sb-admin-2-gh-pages") and [clean-blog](https://startbootstrap.com/themes/clean-blog/ "clean-blog")
 
 * 模版配置部分参考[蜗牛博客](http://www.snailtoday.com/archives/7652)
+* 想要手动安装的可以参考[这里](https://www.jianshu.com/p/353ac259245c),不过本人没有成功，需要仔细阅读
 * [DjangoCMS文档](http://docs.django-cms.org/en/latest/)
 
 |Django Versions|Python Versions|Remarks|
@@ -76,6 +77,7 @@ python环境请自己提前安装好，也可以进入虚拟环境，（本人�
 5. 修改静态图片路径,格式如下
 
   `<header class="intro-header" style="background-image: url({% static 'unoecp/img/about-bg.jpg' %})">`
+  
 6. 其他静态资源，格式参考如下
 
   `{% static 'folder1/folder2/filename.ext' %}`
@@ -153,6 +155,36 @@ python环境请自己提前安装好，也可以进入虚拟环境，（本人�
 6. 添加内容,不做详细介绍，进入DjangoCMS的编辑模式，点击“结构”节点，进入结构视图模式，视图模式是我们给网站添加内容、设定网站外观时经常用到的，在这里你可以看到我们之前插入的两个占位符。
 
 ### **集成博客/新闻模块**
+1. 安装Aldryn News & Blog
+进入我们的项目所在的开发环境，执行命令安装,环境不同安装目录有所不同，请注意
+
+`pip install aldryn-newsblog`
+
+2. 配置Aldryn News & Blog
+打开项目的settings.py文件，将以下代码加入到`INSTALLED_APPS`的`'cms'`后面。
+```
+# you will probably need to add these
+'aldryn_apphooks_config',
+'aldryn_categories',
+'aldryn_common',
+'aldryn_newsblog',
+'aldryn_people',
+'aldryn_reversion',
+'aldryn_translation_tools',
+'parler',
+'sortedm2m',
+'taggit',
+```
+
+>小提示：
+>正常情况下，我们完成以上的步骤就可以了，不过由于aldryn_newsblog 和 djangocms没有自动同步的原因，现在环境中虽然安装了django-reversion，但是在installed apps里面却没有自动添加，所以我们必须手动加上django-reversion，否则后期发布文章的时候，就会出现`“<class 'cms.models.placeholdermodel.Placeholder'> has not been registered with django-reversion”`的错误提示。
+>
+>将代码`'reversion'`加入到`INSTALLED_APPS`里，在`'filter',`之后
+
+3. 执行命令，进行数据库同步。
+
+`python manage.py migrate`
+
 
 ### **添加博客文章**
 
