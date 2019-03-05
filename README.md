@@ -1,9 +1,20 @@
+![不丁Logo](https://www.zhenzhidaole.com/media/filer_public_thumbnails/filer_public/19/33/193321a0-48f2-4632-aeb3-4a20ea1e98e6/logo.png__200.0x200.0_q85_subsampling-2.png "不丁")
+
+[不丁官网](https://www.zhenzhidaole.com/ "不丁官网")
+
 ---
 Base on DjangoCMS and Front-end Themes,include [startbootstrap-sb-admin-2-gh-pages](https://startbootstrap.com/template-categories/all/ "startbootstrap-sb-admin-2-gh-pages") and [clean-blog](https://startbootstrap.com/themes/clean-blog/ "clean-blog")
 
 * 模版配置部分参考[蜗牛博客](http://www.snailtoday.com/archives/7652)
 * [DjangoCMS文档](http://docs.django-cms.org/en/latest/)
 
+|Django Versions|Python Versions|Remarks|
+|:-|---|:------:|
+|1.8|2.7,3.2,3.3,3.4,3.5||
+|1.9,1.10|2.7,3.4,3.5||
+|1.11|2.7,3.4,3.5||
+|2.0|3.4,3.5,3.6||
+|2.1|3.5,3.6,3.7||
 
 ---
 
