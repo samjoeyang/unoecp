@@ -194,7 +194,27 @@ Base on DjangoCMS and Front-end Themes,include [startbootstrap-sb-admin-2-gh-pag
 ---
 
 ## **DjangoCMS安装：**
-python环境请自己提前安装好，也可以进入虚拟环境，（本人在虚拟环境下出现过多次报错，放弃，直接用系统环境下配置安装）
+0. 提前准备
+
+* python环境请自己提前安装好，也可以进入虚拟环境，
+```
+virtualenv env
+source env/bin/activate
+```
+（本人在虚拟环境下出现过多次报错，放弃，直接用系统环境下配置安装）
+
+* pip升级一下
+```
+pip install --upgrade pip
+```
+
+* mysql插件要安装一下
+```
+pip install PyMySQL
+pip install mysqlclient
+```
+
+以上都准备好之后正式开始！
 
 1. 执行以下命令安装django CMS installer
 
@@ -222,7 +242,7 @@ python环境请自己提前安装好，也可以进入虚拟环境，（本人�
 6. 登陆后台
 输入用户名：admin，密码：admin，进行登陆。
 
----
+
 >手动创建root用户,命令行里输入
 >
 >   `python manage.py createsuperuser`
@@ -231,7 +251,41 @@ python环境请自己提前安装好，也可以进入虚拟环境，（本人�
 >
 >   `python manage.py runserver 8000`
 >
----
+
+
+## **settings文件配置说明**
+
+1. 修改`ALLOWED_HOSTS = []`替换为`ALLOWED_HOSTS = ['*']`
+2. 修改`TIME_ZONE = 'Etc/UTC'`替换为`TIME_ZONE = 'Asia/Shanghai'`
+3. 设置`SITE_ID=1`,必须有
+4. 添加
+```
+import sys
+sys.path.append('/var/www/djangocms/env/lib/python2.7/site-packages/')
+
+```
+5. LANGUAGE_CODE设置可根据自己需要进行修改，本项目安装完即`LANGUAGE_CODE = 'zh'`
+6. 设置DATABASE
+```
+'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_name',
+        'USER': 'username',
+        'PASSWORD': 'password',
+        'HOST': 'host ip or domain',
+        'PORT': '3306',
+        }
+}
+```
+7. 在app目录下的`__init__.py`加入
+```
+import pymysql
+pymysql.install_as_MySQLdb()
+
+SITE_DIR = os.path.join(BASE_DIR,"sites")
+sys.path.append(SITE_DIR)
+```
+
 
 ## **模版配置**
 1. 把模版的css、js、images等文件或目录复制到static文件夹下面,可以创建自己的目录，如“unoecp”
@@ -376,38 +430,6 @@ Django创建项目的命令是`django-admin startproject UNOECP`,不过本项目
 
 `python manage.py startapp UNOECP`
 
-## **settings文件配置说明**
-
-1. 修改`ALLOWED_HOSTS = []`替换为`ALLOWED_HOSTS = ['*']`
-2. 修改`TIME_ZONE = 'Etc/UTC'`替换为`TIME_ZONE = 'Asia/Shanghai'`
-3. 设置`SITE_ID=1`,必须有
-4. 添加
-```
-import sys
-sys.path.append('/var/www/djangocms/env/lib/python2.7/site-packages/')
-
-```
-5. LANGUAGE_CODE设置可根据自己需要进行修改，本项目安装完即`LANGUAGE_CODE = 'zh'`
-6. 设置DATABASE
-```
-'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_name',
-        'USER': 'username',
-        'PASSWORD': 'password',
-        'HOST': 'host ip or domain',
-        'PORT': '3306',
-        }
-}
-```
-7. 在app目录下的`__init__.py`加入
-```
-import pymysql
-pymysql.install_as_MySQLdb()
-
-SITE_DIR = os.path.join(BASE_DIR,"sites")
-sys.path.append(SITE_DIR)
-```
 
 
 ***
