@@ -17,6 +17,179 @@ Base on DjangoCMS and Front-end Themes,include [startbootstrap-sb-admin-2-gh-pag
 |2.0|3.4,3.5,3.6||
 |2.1|3.5,3.6,3.7||
 
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%">
+<col width="11%">
+<col width="11%">
+<col width="5%">
+<col width="5%">
+<col width="6%">
+<col width="6%">
+<col width="5%">
+<col width="5%">
+<col width="5%">
+<col width="5%">
+<col width="5%">
+<col width="5%">
+<col width="5%">
+<col width="5%">
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">django CMS</th>
+<th class="head" colspan="8">Django</th>
+<th class="head" colspan="6">Python</th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head">1.4/1.5</th>
+<th class="head">1.6/1.7</th>
+<th class="head">1.8</th>
+<th class="head">1.9</th>
+<th class="head">1.10</th>
+<th class="head">1.11</th>
+<th class="head">2.0</th>
+<th class="head">2.1</th>
+<th class="head">2.6</th>
+<th class="head">2.7</th>
+<th class="head">3.3</th>
+<th class="head">3.4</th>
+<th class="head">3.5</th>
+<th class="head">3.6</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-odd"><td>3.0.18</td>
+<td>✓</td>
+<td>✓</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>⨯</td>
+<td>⨯</td>
+</tr>
+<tr class="row-even"><td>3.1.7</td>
+<td>⨯</td>
+<td>✓</td>
+<td>✓</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>⨯</td>
+<td>⨯</td>
+</tr>
+<tr class="row-odd"><td>3.2.0</td>
+<td>⨯</td>
+<td>✓</td>
+<td>✓</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>⨯</td>
+<td>⨯</td>
+</tr>
+<tr class="row-even"><td>3.2.1-3.2.5</td>
+<td>⨯</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>⨯</td>
+</tr>
+<tr class="row-odd"><td>3.3.0-3.4.1</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>✓</td>
+<td>✓</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>⨯</td>
+</tr>
+<tr class="row-even"><td>3.4.2-3.4.4</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>⨯</td>
+</tr>
+<tr class="row-odd"><td>3.4.5-3.5.x</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="row-even"><td>3.6.x</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>⨯</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>⨯</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+
+
 ---
 
 ## **DjangoCMS安装：**
