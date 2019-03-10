@@ -202,10 +202,43 @@ Django创建项目的命令是`django-admin startproject UNOECP`,不过本项目
 
 `python manage.py startapp UNOECP`
 
+## **settings文件配置说明**
+
+1. 修改`ALLOWED_HOSTS = []`替换为`ALLOWED_HOSTS = ['*']`
+2. 修改`TIME_ZONE = 'Etc/UTC'`替换为`TIME_ZONE = 'Asia/Shanghai'`
+3. 设置`SITE_ID=1`,必须有
+4. 添加
+```
+import sys
+sys.path.append('/var/www/djangocms/env/lib/python2.7/site-packages/')
+
+```
+5. LANGUAGE_CODE设置可根据自己需要进行修改，本项目安装完即`LANGUAGE_CODE = 'zh'`
+6. 设置DATABASE
+```
+'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_name',
+        'USER': 'username',
+        'PASSWORD': 'password',
+        'HOST': 'host ip or domain',
+        'PORT': '3306',
+        }
+}
+```
+7. 在app目录下的`__init__.py`加入
+```
+import pymysql
+pymysql.install_as_MySQLdb()
+
+SITE_DIR = os.path.join(BASE_DIR,"sites")
+sys.path.append(SITE_DIR)
+```
+
 
 ***
 待补充内容：
-* settings文件配置说明
+* 配置urls.py
 * 多站点多域名情况下的SITE_ID的配置
 ***
 
